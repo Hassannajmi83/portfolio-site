@@ -7,79 +7,88 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="menu-bar">
-    <div class="menu-left">
-      <span class="menu-logo">●</span>
-      <span class="menu-name">portfolio-site</span>
+  <div class="wallpaper"></div>
+  <div class="wallpaper-overlay"></div>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="apple">●</span>
+      <span class="site-name">HassanOS</span>
     </div>
-    <div class="menu-right">
-      <span id="menuTime">12:00 PM</span>
-    </div>
+    <div class="topbar-right" id="topbarTime">9:20 AM</div>
   </header>
 
   <main class="desktop">
     <section class="hero">
+      <p class="eyebrow">Portfolio</p>
       <h1>Hassan Najmi</h1>
-      <p>Student developer building practical web tools.</p>
+      <p class="subtitle">Student developer building practical web tools.</p>
     </section>
 
-    <section class="app-grid">
-      <button class="app-button" data-window="aboutWindow">
-        <div class="app-icon blue">👤</div>
-        <span>About</span>
-      </button>
-
-      <button class="app-button" data-window="projectsWindow">
-        <div class="app-icon gold">📁</div>
-        <span>Projects</span>
-      </button>
-
-      <button class="app-button" data-window="contactWindow">
-        <div class="app-icon gray">✉️</div>
-        <span>Contact</span>
-      </button>
-    </section>
-
-    <section id="aboutWindow" class="window hidden">
-      <div class="window-bar">
-        <div class="traffic-lights">
-          <button class="light red close-btn" data-close="aboutWindow"></button>
-          <span class="light yellow"></span>
-          <span class="light green"></span>
+    <section class="launcher">
+      <button class="app" data-window="about">
+        <div class="app-icon app-blue">
+          <span>👤</span>
         </div>
-        <div class="window-title">About Me</div>
+        <span class="app-label">About</span>
+      </button>
+
+      <button class="app" data-window="projects">
+        <div class="app-icon app-silver">
+          <span>📁</span>
+        </div>
+        <span class="app-label">Projects</span>
+      </button>
+
+      <button class="app" data-window="contact">
+        <div class="app-icon app-gray">
+          <span>✉</span>
+        </div>
+        <span class="app-label">Contact</span>
+      </button>
+    </section>
+
+    <section id="about" class="window hidden">
+      <div class="window-bar">
+        <div class="traffic">
+          <button class="dot red close-btn" data-close="about" aria-label="Close"></button>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="window-title">About</div>
       </div>
 
-      <div class="window-content">
-        <div class="about-layout">
-          <div class="profile-panel">
+      <div class="window-body">
+        <div class="about-grid">
+          <div class="about-card profile">
             <div class="avatar">HN</div>
             <h2>Hassan Najmi</h2>
-            <p>Student • Builder • Portfolio in progress</p>
+            <p>Student • Builder • Growing front-end portfolio</p>
           </div>
 
-          <div class="about-panel">
-            <h3>About</h3>
+          <div class="about-card details">
+            <h3>About Me</h3>
             <p>
-              I build practical websites and web apps that solve real problems, especially around productivity,
-              studying, and clean UI. I’m focused on improving my front-end development skills by building
-              small projects consistently and turning them into a stronger portfolio.
+              I build practical websites and small web apps focused on studying,
+              productivity, and clean user experience. Right now I’m improving my
+              front-end skills by consistently shipping projects and turning them into
+              a stronger portfolio.
             </p>
 
-            <div class="info-grid">
-              <div class="info-card">
+            <div class="facts">
+              <div class="fact">
                 <span>Current Focus</span>
                 <strong>HTML, CSS, JavaScript</strong>
               </div>
-              <div class="info-card">
+              <div class="fact">
                 <span>Best Project</span>
                 <strong>IB Study Planner</strong>
               </div>
-              <div class="info-card">
+              <div class="fact">
                 <span>Style</span>
-                <strong>Modern, clean UI</strong>
+                <strong>Clean, modern UI</strong>
               </div>
-              <div class="info-card">
+              <div class="fact">
                 <span>Next Goal</span>
                 <strong>More advanced apps</strong>
               </div>
@@ -89,39 +98,39 @@
       </div>
     </section>
 
-    <section id="projectsWindow" class="window hidden">
+    <section id="projects" class="window hidden">
       <div class="window-bar">
-        <div class="traffic-lights">
-          <button class="light red close-btn" data-close="projectsWindow"></button>
-          <span class="light yellow"></span>
-          <span class="light green"></span>
+        <div class="traffic">
+          <button class="dot red close-btn" data-close="projects" aria-label="Close"></button>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
         </div>
         <div class="window-title">Projects</div>
       </div>
 
-      <div class="window-content">
-        <h2>Featured Projects</h2>
+      <div class="window-body">
+        <h2 class="section-title">Featured Projects</h2>
 
         <div class="project-list">
           <a class="project-card" href="https://ibsurvivalhub.com" target="_blank" rel="noreferrer">
             <div class="project-icon">📘</div>
-            <div>
+            <div class="project-text">
               <h3>IB Study Planner</h3>
               <p>Study hub with subjects, planner, quiz, resources, and boundaries.</p>
             </div>
           </a>
 
           <a class="project-card" href="https://hassannajmi83.github.io/Pomodoro/" target="_blank" rel="noreferrer">
-            <div class="project-icon">⏱️</div>
-            <div>
+            <div class="project-icon">⏱</div>
+            <div class="project-text">
               <h3>Pomodoro Timer</h3>
-              <p>Customizable focus timer with work and break phases.</p>
+              <p>Custom focus timer with work and break phases.</p>
             </div>
           </a>
 
           <a class="project-card" href="https://hassannajmi83.github.io/habit-tracker/" target="_blank" rel="noreferrer">
             <div class="project-icon">✅</div>
-            <div>
+            <div class="project-text">
               <h3>Habit Tracker</h3>
               <p>Track daily habits and build consistency over time.</p>
             </div>
@@ -129,7 +138,7 @@
 
           <a class="project-card" href="https://hassannajmi83.github.io/study-notes-app/" target="_blank" rel="noreferrer">
             <div class="project-icon">📝</div>
-            <div>
+            <div class="project-text">
               <h3>Study Notes App</h3>
               <p>Create and save study notes directly in the browser.</p>
             </div>
@@ -138,32 +147,32 @@
       </div>
     </section>
 
-    <section id="contactWindow" class="window hidden">
+    <section id="contact" class="window hidden">
       <div class="window-bar">
-        <div class="traffic-lights">
-          <button class="light red close-btn" data-close="contactWindow"></button>
-          <span class="light yellow"></span>
-          <span class="light green"></span>
+        <div class="traffic">
+          <button class="dot red close-btn" data-close="contact" aria-label="Close"></button>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
         </div>
         <div class="window-title">Contact</div>
       </div>
 
-      <div class="window-content">
-        <h2>Contact</h2>
+      <div class="window-body">
+        <h2 class="section-title">Contact</h2>
 
         <div class="contact-list">
-          <a href="mailto:hassannajmi83@gmail.com" class="contact-card">
-            <span>Email</span>
+          <a class="contact-card" href="mailto:hassannajmi83@gmail.com">
+            <span class="contact-type">Email</span>
             <strong>hassannajmi83@gmail.com</strong>
           </a>
 
-          <a href="https://github.com/Hassannajmi83" target="_blank" rel="noreferrer" class="contact-card">
-            <span>GitHub</span>
-            <strong>Hassannajmi83</strong>
+          <a class="contact-card" href="https://github.com/Hassannajmi83" target="_blank" rel="noreferrer">
+            <span class="contact-type">GitHub</span>
+            <strong>github.com/Hassannajmi83</strong>
           </a>
 
-          <a href="https://ibsurvivalhub.com" target="_blank" rel="noreferrer" class="contact-card">
-            <span>Main Site</span>
+          <a class="contact-card" href="https://ibsurvivalhub.com" target="_blank" rel="noreferrer">
+            <span class="contact-type">Main Site</span>
             <strong>ibsurvivalhub.com</strong>
           </a>
         </div>
@@ -171,11 +180,11 @@
     </section>
   </main>
 
-  <div class="dock">
-    <button class="dock-app" data-window="aboutWindow">👤</button>
-    <button class="dock-app" data-window="projectsWindow">📁</button>
-    <button class="dock-app" data-window="contactWindow">✉️</button>
-  </div>
+  <nav class="dock">
+    <button class="dock-icon" data-window="about" aria-label="About">👤</button>
+    <button class="dock-icon" data-window="projects" aria-label="Projects">📁</button>
+    <button class="dock-icon" data-window="contact" aria-label="Contact">✉</button>
+  </nav>
 
   <script src="script.js"></script>
 </body>
