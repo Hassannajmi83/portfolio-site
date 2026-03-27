@@ -1,34 +1,35 @@
-const appButtons = document.querySelectorAll(".app-button, .dock-app");
+const launchButtons = document.querySelectorAll(".app, .dock-icon");
 const closeButtons = document.querySelectorAll(".close-btn");
-const menuTime = document.getElementById("menuTime");
+const windows = document.querySelectorAll(".window");
+const topbarTime = document.getElementById("topbarTime");
 
-appButtons.forEach((button) => {
+launchButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const targetId = button.dataset.window;
-    const targetWindow = document.getElementById(targetId);
-    if (targetWindow) {
-      targetWindow.classList.remove("hidden");
-    }
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    target.classList.remove("hidden");
   });
 });
 
 closeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const targetId = button.dataset.close;
-    const targetWindow = document.getElementById(targetId);
-    if (targetWindow) {
-      targetWindow.classList.add("hidden");
-    }
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    target.classList.add("hidden");
   });
 });
 
-function updateTime() {
+function updateTopbarTime() {
   const now = new Date();
-  menuTime.textContent = now.toLocaleTimeString([], {
+  topbarTime.textContent = now.toLocaleTimeString([], {
     hour: "numeric",
     minute: "2-digit"
   });
 }
 
-updateTime();
-setInterval(updateTime, 1000 * 30);
+updateTopbarTime();
+setInterval(updateTopbarTime, 30000);
