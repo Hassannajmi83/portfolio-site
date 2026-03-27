@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hassan Najmi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="menu-bar">
+    <div class="menu-left">
+      <span class="menu-logo">●</span>
+      <span class="menu-name">portfolio-site</span>
+    </div>
+    <div class="menu-right">
+      <span id="menuTime">12:00 PM</span>
+    </div>
+  </header>
+
+  <main class="desktop">
+    <section class="hero">
+      <h1>Hassan Najmi</h1>
+      <p>Student developer building practical web tools.</p>
+    </section>
+
+    <section class="app-grid">
+      <button class="app-button" data-window="aboutWindow">
+        <div class="app-icon blue">👤</div>
+        <span>About</span>
+      </button>
+
+      <button class="app-button" data-window="projectsWindow">
+        <div class="app-icon gold">📁</div>
+        <span>Projects</span>
+      </button>
+
+      <button class="app-button" data-window="contactWindow">
+        <div class="app-icon gray">✉️</div>
+        <span>Contact</span>
+      </button>
+    </section>
+
+    <section id="aboutWindow" class="window hidden">
+      <div class="window-bar">
+        <div class="traffic-lights">
+          <button class="light red close-btn" data-close="aboutWindow"></button>
+          <span class="light yellow"></span>
+          <span class="light green"></span>
+        </div>
+        <div class="window-title">About Me</div>
+      </div>
+
+      <div class="window-content">
+        <div class="about-layout">
+          <div class="profile-panel">
+            <div class="avatar">HN</div>
+            <h2>Hassan Najmi</h2>
+            <p>Student • Builder • Portfolio in progress</p>
+          </div>
+
+          <div class="about-panel">
+            <h3>About</h3>
+            <p>
+              I build practical websites and web apps that solve real problems, especially around productivity,
+              studying, and clean UI. I’m focused on improving my front-end development skills by building
+              small projects consistently and turning them into a stronger portfolio.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <span>Current Focus</span>
+                <strong>HTML, CSS, JavaScript</strong>
+              </div>
+              <div class="info-card">
+                <span>Best Project</span>
+                <strong>IB Study Planner</strong>
+              </div>
+              <div class="info-card">
+                <span>Style</span>
+                <strong>Modern, clean UI</strong>
+              </div>
+              <div class="info-card">
+                <span>Next Goal</span>
+                <strong>More advanced apps</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projectsWindow" class="window hidden">
+      <div class="window-bar">
+        <div class="traffic-lights">
+          <button class="light red close-btn" data-close="projectsWindow"></button>
+          <span class="light yellow"></span>
+          <span class="light green"></span>
+        </div>
+        <div class="window-title">Projects</div>
+      </div>
+
+      <div class="window-content">
+        <h2>Featured Projects</h2>
+
+        <div class="project-list">
+          <a class="project-card" href="https://ibsurvivalhub.com" target="_blank" rel="noreferrer">
+            <div class="project-icon">📘</div>
+            <div>
+              <h3>IB Study Planner</h3>
+              <p>Study hub with subjects, planner, quiz, resources, and boundaries.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://hassannajmi83.github.io/Pomodoro/" target="_blank" rel="noreferrer">
+            <div class="project-icon">⏱️</div>
+            <div>
+              <h3>Pomodoro Timer</h3>
+              <p>Customizable focus timer with work and break phases.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://hassannajmi83.github.io/habit-tracker/" target="_blank" rel="noreferrer">
+            <div class="project-icon">✅</div>
+            <div>
+              <h3>Habit Tracker</h3>
+              <p>Track daily habits and build consistency over time.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://hassannajmi83.github.io/study-notes-app/" target="_blank" rel="noreferrer">
+            <div class="project-icon">📝</div>
+            <div>
+              <h3>Study Notes App</h3>
+              <p>Create and save study notes directly in the browser.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contactWindow" class="window hidden">
+      <div class="window-bar">
+        <div class="traffic-lights">
+          <button class="light red close-btn" data-close="contactWindow"></button>
+          <span class="light yellow"></span>
+          <span class="light green"></span>
+        </div>
+        <div class="window-title">Contact</div>
+      </div>
+
+      <div class="window-content">
+        <h2>Contact</h2>
+
+        <div class="contact-list">
+          <a href="mailto:hassannajmi83@gmail.com" class="contact-card">
+            <span>Email</span>
+            <strong>hassannajmi83@gmail.com</strong>
+          </a>
+
+          <a href="https://github.com/Hassannajmi83" target="_blank" rel="noreferrer" class="contact-card">
+            <span>GitHub</span>
+            <strong>Hassannajmi83</strong>
+          </a>
+
+          <a href="https://ibsurvivalhub.com" target="_blank" rel="noreferrer" class="contact-card">
+            <span>Main Site</span>
+            <strong>ibsurvivalhub.com</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="dock">
+    <button class="dock-app" data-window="aboutWindow">👤</button>
+    <button class="dock-app" data-window="projectsWindow">📁</button>
+    <button class="dock-app" data-window="contactWindow">✉️</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
